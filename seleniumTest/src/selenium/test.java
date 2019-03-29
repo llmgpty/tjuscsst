@@ -52,6 +52,7 @@ public class test {
         driver.findElement(By.id("btn_login")).click();
         String gitUrls = null;
         gitUrls = driver.findElement(By.id("student-git")).getText();
+        
         if (!gitUrl.equals(gitUrls)){
             System.out.println(id);
             System.out.println(gitUrl);
@@ -59,6 +60,7 @@ public class test {
             continue;
              
         }
+        driver.findElement(By.id("btn_logout")).click();
         assertEquals(gitUrl,gitUrls);
     }
   }
